@@ -1,0 +1,20 @@
+type Query {
+    messages: [Message!]
+}
+
+
+type Mutation {
+    createMessage(title: String!, content: String!, author: String!): Message
+    deleteMessage(_id: String!): Message
+    
+}
+
+
+type Message {
+    _id: ID!
+    title: String!
+    content: String!
+    author: String!
+}
+
+#Aqui definimos los tipos de queries y Mutations, ademas, de los datos que contendra el elemento que le pasaremos a la mutacion o a la querie
